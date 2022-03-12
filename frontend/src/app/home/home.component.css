@@ -1,0 +1,48 @@
+.title-techgym {
+    font-size: 42px;
+    color: black;
+    font-weight: 400;
+}
+
+.mt-10 {
+    margin-top: 15vh;
+}
+
+.text-techgym {
+    font-size: 25px;
+    font-weight: 300;
+    color: #4F4F4F
+}
+
+.img-size {
+    width: 540px;
+    height: 361px;
+}
+
+.btn-techgym {
+    width: 203px;
+    height: 51px;
+
+
+    background: #0094FF;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.btn-contact {
+    width: 203px;
+    height: 51px;
+
+
+    background: #FFFFFF;
+    border: 1px solid #0094FF;
+    box-sizing: border-box;
+    border-radius: 5px; 
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: #0094FF;
+
+}

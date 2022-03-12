@@ -1,0 +1,50 @@
+h2 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+.img-size {
+    width: 76px;
+    height: 76px;
+    margin: 0;
+    margin-left: 5vh;
+}
+
+.align-items {
+    display: flex;
+    align-items: center;
+}
+
+.btn-confirm {
+    width: 203px;
+    height: 39px;
+
+    background: #0094FF;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+.btn-cancel {
+    width: 176px;
+    height: 39px;
+
+
+    background: #FFFFFF;
+    border: 1px solid #0094FF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #0094FF;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #0094FF;
+  }

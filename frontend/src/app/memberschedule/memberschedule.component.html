@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <h2>
+                Veja seus treinos agendados, ou agende um novo!
+            </h2>
+            <button (click)='findAllTrainers()' class="btn btn-new "  type="button" data-bs-toggle="modal" data-bs-target="#newModal">
+                Novo treino
+            </button>
+        </div>
+        
+    </div>
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-12">
+            <h4 class="text-center">Seus treinos:</h4>
+           
+        </div>
+    </div>
+ 
+   
+ 
+</div>
+<div class="container">
+    <div *ngFor='let scheduling of clientSchedulings' class="mb-3 row d-flex justify-content-center">
+        <div class="col-12 schedule-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="mt-5 text-techgym">Data:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.date | date: 'dd/MM/yyyy'}} às {{scheduling.date | date: 'HH:mm'}}</div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mt-5 text-techgym">Personal:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.trainer.name}}</div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button (click)='delete(scheduling.id)' class="btn btn-update mt-4">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+                
+                
+            </div>
+
+        
+    </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="newModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+       <div class="modal-techgym d-flex align-items-center">
+        
+        <div class="container">
+            <div class="row  d-flex justify-content-center">
+                <div class="col-8">
+                    <div class="form-group">
+                        <label class="form-label" for="personal">Personal:</label>
+                        <select class="form-control"  [(ngModel)] = 'emailTrainer'>
+                        <option *ngFor='let trainer of trainers' value="{{trainer.email}}">{{trainer.name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label class="form-label" for="personal">Data:</label>
+                        <input [(ngModel)]='dateSchedule' class="form-control" type="datetime-local" name="" id="">
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <button data-bs-dismiss="modal" (click)='saveSchedule()' class="btn btn-ok me-3">
+                            Agendar
+                        </button>
+                        <button data-bs-dismiss="modal" class="btn btn-cancel">
+                            Cancelar
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+    
+       </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,44 @@
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.h1-tech {
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.h1-gym {
+    color: #0094FF;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.img-size {
+    width: 75px;
+    height: 75px;
+
+}
+
+.navbar-techgym {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-text-techgym {
+    align-items: center;
+    display: flex;
+}
+
+.btn-techgym {
+    width: 100px;
+    height: 40px;
+    background: #0094FF;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 3vh;
+    
+}

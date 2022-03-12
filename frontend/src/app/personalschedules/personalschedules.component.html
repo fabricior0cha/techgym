@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <h2>
+                Olá {{name}}!
+            </h2>
+            <h2>
+                Confira os treinos agendados com você:
+            </h2>
+        </div>
+        
+    </div>
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-12">
+            <h4 class="text-center">Seus treinos:</h4>
+        </div>
+    </div>
+ 
+   
+ 
+</div>
+<div  class="container">
+    <div  *ngFor='let scheduling of schedulings' class="row">
+        <div class="mb-3 col-12 schedule-content d-flex justify-content-center">
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="mt-5 text-techgym">Data:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.date | date: 'dd/MM/yyyy'}} às {{scheduling.date | date: 'HH:mm'}}</div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mt-5 text-techgym">Aluno:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.client.name}}</div>
+                            <div class="mt-5 ms-2 text-techgym">Idade:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.client.age}}</div>   
+                            <div class="mt-5 ms-2 text-techgym">Peso:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.client.weight}}kg</div>      
+                            <div class="mt-5 ms-2 text-techgym">Altura:  </div>
+                            <div class="mt-5 ms-2 text-techgym-color">{{scheduling.client.height}}cm</div>                     
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>  
+    </div>
+</div>
+
+

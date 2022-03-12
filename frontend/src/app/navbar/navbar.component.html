@@ -1,0 +1,20 @@
+<header>
+    <nav class="container">
+        <div class="navbar-techgym">
+            <div class="navbar-text-techgym">
+                <img src="../../assets/img/image 2.svg" class="img-size me-3" alt="">
+                <h1 class="me-2 mt-3 h1-tech ">TECH</h1>
+                <h1 class="mt-3 h1-gym">GYM</h1>
+            </div>
+            <div class="container d-flex justify-content-end mt-1">
+                <button *ngIf='loginShow()' routerLink="/login/aluno" class="btn btn-techgym text-white">
+                    Login
+                </button>
+                <button *ngIf='logoutShow()' (click)='logout()' class="btn btn-techgym text-white">
+                    Sair
+                </button>
+            </div>
+           
+        </div>
+    </nav>
+</header>
