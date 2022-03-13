@@ -12,13 +12,13 @@ export class SchedulesService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Scheduling[]>{
-    return this.http.get<Scheduling[]>('http://localhost:8080/schedulings')
+    return this.http.get<Scheduling[]>('https://app-fabricio-techgym.herokuapp.com/schedulings')
   }
 
   post(dto: SchedulingDTO): Observable<Scheduling>{
-    return this.http.post<Scheduling>('http://localhost:8080/schedulings', dto)
+    return this.http.post<Scheduling>('https://app-fabricio-techgym.herokuapp.com/schedulings', dto)
   }
   delete(id : number){
-    return this.http.delete(`http://localhost:8080/schedulings/${id}`)
+    return this.http.delete(`https://app-fabricio-techgym.herokuapp.com/schedulings/${id}`)
   }
 }

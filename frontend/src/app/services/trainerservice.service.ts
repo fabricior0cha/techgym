@@ -12,18 +12,18 @@ export class TrainerService {
   constructor(private http: HttpClient) { }
 
   insertTrainer (trainer : Trainer) : Observable<Trainer>{
-    return this.http.post<Trainer>("http://localhost:8080/trainers", trainer)
+    return this.http.post<Trainer>("https://app-fabricio-techgym.herokuapp.com/trainers", trainer)
   }
 
   loginTrainer (trainer : TrainerDTO): Observable<Trainer>{
-    return this.http.put<Trainer>("http://localhost:8080/trainers", trainer)
+    return this.http.put<Trainer>("https://app-fabricio-techgym.herokuapp.com/trainers", trainer)
   }
 
   findById(id: number): Observable<Trainer>{
-    return this.http.get<Trainer>(`http://localhost:8080/trainers/${id}`)
+    return this.http.get<Trainer>(`https://app-fabricio-techgym.herokuapp.com/trainers/${id}`)
   }
 
   findAll(): Observable<Trainer[]>{
-    return this.http.get<Trainer[]>("http://localhost:8080/trainers")
+    return this.http.get<Trainer[]>("https://app-fabricio-techgym.herokuapp.com/trainers")
   }
 }

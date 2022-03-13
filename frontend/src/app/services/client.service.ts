@@ -12,15 +12,15 @@ export class ClientService {
   constructor(private http: HttpClient) { }
 
   insertClient (client : Client): Observable<Client>{
-    return this.http.post<Client>("http://localhost:8080/clients", client);
+    return this.http.post<Client>("https://app-fabricio-techgym.herokuapp.com/clients", client);
   }
 
   loginClient (client : ClientDTO): Observable<Client>{
-    return this.http.put<Client>("http://localhost:8080/clients", client)
+    return this.http.put<Client>("https://app-fabricio-techgym.herokuapp.com/clients", client)
   }
 
   findById(id: number): Observable<Client>{
-    return this.http.get<Client>(`http://localhost:8080/clients/${id}`)
+    return this.http.get<Client>(`https://app-fabricio-techgym.herokuapp.com/clients/${id}`)
   }
 
 }
