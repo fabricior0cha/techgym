@@ -1,12 +1,8 @@
 package com.fabricio.gymtech.services;
 
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
-import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,10 +44,6 @@ public class SchedulingService {
 	public Scheduling insert(SchedulingDTO dto) {
 		Trainer trainer = trainerRepository.findByEmail(dto.getTrainerEmail());
 		Client client = clientRepository.findByEmail(dto.getClientEmail());
-		TimeZone tz = TimeZone.getTimeZone("America/Sao_Paulo");
-		TimeZone.setDefault(tz);
-		
-		
 		Optional<Scheduling> obj = repository.findByTrainerAndDate(trainer, dto.getDate());
 		if(obj.isEmpty()) {
 			if(dto.getDate().isBefore(LocalDateTime.now())){

@@ -1,7 +1,6 @@
 package com.fabricio.gymtech.repositories;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
