@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a8992ef4-46ef-4dff-8193-9714f93f55e7/deploy-status)](https://app.netlify.com/sites/techgym/deploys) ![](https://img.shields.io/badge/license-MIT-brightgreen)
+ ![](https://img.shields.io/badge/license-MIT-brightgreen)
 ### Acesse a aplicação <https://techgym.netlify.app/>
 ![](https://i.imgur.com/rkNmWq8.png)
   
